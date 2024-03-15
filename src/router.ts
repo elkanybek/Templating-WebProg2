@@ -1,5 +1,5 @@
 import { IncomingMessage, ServerResponse } from "http";
-import { getHome } from "./controller";
+import { getAllPokemon, getHome } from "./controller";
 
 interface RouteHandler {
     (req: IncomingMessage, res: ServerResponse): void;
@@ -19,3 +19,5 @@ export const routes: Routes = {
 };
 
 routes.GET["/"] = getHome;
+routes.GET["/pokemon"] = getAllPokemon;
+
